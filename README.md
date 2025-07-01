@@ -71,7 +71,7 @@ Patient records were sourced from **two different hospitals**, merged, cleaned, 
   * XGBoost
   * CatBoost 
   * SVM 
-  
+
 * Evaluation Metrics:
 
   * Overall accuracy
@@ -150,6 +150,6 @@ pip install -r requirements.txt
 
 ## 🤝 Acknowledgements
 
-* This work draws on collaborative efforts between clinical staff of the hospital and Myself (@Aadunni).
+* This work draws on collaborative efforts between clinical staff of University of Ibadan, University College Hospital and Ladoke Akintola Teaching Hospital Ogbomoso.
 * Special thanks to the contributing hospitals for anonymized datasets.
 

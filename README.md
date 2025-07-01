@@ -69,7 +69,9 @@ Patient records were sourced from **two different hospitals**, merged, cleaned, 
   * Decision Tree
   * Random Forest
   * XGBoost
-  * CatBoost
+  * CatBoost 
+  * SVM 
+  
 * Evaluation Metrics:
 
   * Overall accuracy

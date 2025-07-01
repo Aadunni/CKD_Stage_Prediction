@@ -113,6 +113,10 @@ CKD-Model/
 ├── visuals/
 │   └── feature_importance_plot.png
 │
+├── src/
+│   ├── __init__.py
+│   └── main.py               # Main script to run training/inference
+│
 ├── requirements.txt
 └── README.md
 ```
@@ -142,10 +146,8 @@ pip install -r requirements.txt
 ---
 
 
----
-
 ## 🤝 Acknowledgements
 
-* This work draws on collaborative efforts between clinical informatics teams and data science units.
+* This work draws on collaborative efforts between clinical staff of the hospital and Myself (@Aadunni).
 * Special thanks to the contributing hospitals for anonymized datasets.
 

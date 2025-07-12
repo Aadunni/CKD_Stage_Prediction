@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 # Initialize FastAPI app
 app = FastAPI(
     title="CKD Prediction API",
-    description="API for predicting Chronic Kidney Disease stages using AdaBoost model",
+    description="API for predicting Chronic Kidney Disease stages using Machine Learning model",
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc"

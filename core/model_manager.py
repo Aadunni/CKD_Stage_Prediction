@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 class ModelManager:
     """Handles model loading, preprocessing, and predictions"""
     
-    def __init__(self, model_path: str = "RandomForest.joblib"):
+    def __init__(self, model_path: str = "/workspaces/CKD_Stage_Prediction/model_artifacts/RandomForest.joblib"):
         self.model_path = model_path
         self.model = None
         self.feature_columns = [

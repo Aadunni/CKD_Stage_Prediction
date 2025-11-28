@@ -1,0 +1,55 @@
+# Cloud Run service configuration for CKD Streamlit App
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: ckd-streamlit
+  annotations:
+    run.googleapis.com/ingress: all
+    run.googleapis.com/execution-environment: gen2
+spec:
+  template:
+    metadata:
+      annotations:
+        # CPU and Memory limits
+        run.googleapis.com/cpu: "1000m"
+        run.googleapis.com/memory: "2Gi"
+        # Scaling configuration
+        autoscaling.knative.dev/minScale: "0"
+        autoscaling.knative.dev/maxScale: "5"
+        # Timeout for requests
+        run.googleapis.com/timeout: "300s"
+    spec:
+      containerConcurrency: 80
+      timeoutSeconds: 300
+      containers:
+      - image: gcr.io/PROJECT_ID/ckd-streamlit:latest
+        ports:
+        - name: http1
+          containerPort: 8080
+        env:
+        - name: API_URL
+          value: "https://ckd-api-PROJECT_HASH.a.run.app"
+        - name: PORT
+          value: "8080"
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 2Gi
+        startupProbe:
+          httpGet:
+            path: /_stcore/health
+            port: 8080
+          initialDelaySeconds: 10
+          timeoutSeconds: 5
+          periodSeconds: 10
+          failureThreshold: 3
+        livenessProbe:
+          httpGet:
+            path: /_stcore/health
+            port: 8080
+          initialDelaySeconds: 30
+          timeoutSeconds: 5
+          periodSeconds: 30
+  traffic:
+  - percent: 100
+    latestRevision: true

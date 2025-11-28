@@ -1,14 +1,27 @@
+# Core data science libraries
 pandas
 numpy
+scikit-learn
+joblib
+
+# Visualization
 matplotlib
 seaborn
-scikit-learn
-tensorflow
-mlflow
-streamlit
+plotly
+
+# Machine learning models
+xgboost
+catboost
+
+# API and web framework
 fastapi
-google
 uvicorn[standard]
 pydantic
-joblib
-python-multipart
+streamlit
+requests
+
+# AI/LLM
+google-genai
+
+# Utilities
+python-dotenv

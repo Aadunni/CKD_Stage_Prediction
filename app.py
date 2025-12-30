@@ -8,7 +8,7 @@ import pandas as pd
 from datetime import datetime
 
 # Import utility functions
-from streamlit_utils import (
+from utils import (
     check_model_loaded,
     get_risk_color,
     create_gauge_chart,

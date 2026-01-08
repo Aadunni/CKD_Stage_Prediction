@@ -552,7 +552,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **Ayo-Cyber** - Initial work - [GitHub Profile](https://github.com/Ayo-Cyber)
+- **Oyenike Olukiran Ph.D.** - Initial work - [GitHub Profile](https://github.com/Aadunni)
 
 ---
 

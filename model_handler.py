@@ -12,7 +12,7 @@ from typing import Dict, Any, Optional, List
 import os
 from dotenv import load_dotenv
 from google import genai
-
+import streamlit as st
 # Load environment variables
 load_dotenv()
 
@@ -59,7 +59,7 @@ class CKDModelHandler:
     
     def initialize_gemini(self):
         """Initialize Gemini client for medical assessments"""
-        gemini_api_key = os.getenv('GEMINI_API_KEY')
+        gemini_api_key = st.secrets["GEMINI_API_KEY"]
         
         if gemini_api_key:
             try:

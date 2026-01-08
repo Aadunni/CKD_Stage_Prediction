@@ -16,6 +16,7 @@ import asyncio
 import json
 from pathlib import Path
 from dotenv import load_dotenv
+import streamlit as st
 
 from google import genai
 
@@ -30,7 +31,7 @@ feature_names = None
 gemini_client = None
 
 # LLM Configuration
-GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 # GEMINI_API_URL is no longer used for the SDK, but kept for context.
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
 
